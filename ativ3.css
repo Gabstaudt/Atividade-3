@@ -1,0 +1,86 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #FFDDC1, #FFC1CC); /* Fundo*/
+    overflow: hidden;
+}
+
+
+.container {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.poema h2 {
+    font-size: 2.2em;
+    color: #333;
+}
+
+.poema h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.poema p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.8em;
+}
+
+/* Animação*/
+.borboleta {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url('borboleta.png'); 
+    background-size: cover;
+    z-index: 1;
+    animation: fly 10s infinite;
+}
+
+.borboleta1 {
+    top: 50px;
+    left: -60px;
+    animation-duration: 12s;
+}
+
+.borboleta2 {
+    top: 150px;
+    left: -100px;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.borboleta3 {
+    top: 200px;
+    left: -120px;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+/* movimento das borboletas */
+@keyframes fly {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(100vw) translateY(-50px) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotate(360deg);
+    }
+}
